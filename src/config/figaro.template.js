@@ -6,9 +6,16 @@ exports.FIGARO_DISPLAY_COLUMNS = [
   { Header: "node", accessor: "job.job_info.execute_node" },
   { Header: "timestamp", accessor: "@timestamp" },
   { Header: "duration", accessor: "job.job_info.duration" },
+  { Header: "endpoint", accessor: "job.endpoint_id" },
 ];
 
 exports.FILTERS = [
+  {
+    componentId: "endpoint_id",
+    dataField: "job.endpoint_id",
+    title: "ADES",
+    type: "single",
+  },
   {
     componentId: "resource",
     dataField: "resource",
